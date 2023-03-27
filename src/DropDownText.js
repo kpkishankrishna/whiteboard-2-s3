@@ -7,14 +7,15 @@ const DropDownText = () => {
     const options = [
     
     { label: 'Select', value: 'none' },
-
-    { label: 'Fruit', value: 'fruit' },
-    
-    { label: 'Vegetable', value: 'vegetable' },
-    
-    { label: 'Meat', value: 'meat' },
-    
-    ];
+    { label: 'a', value: 'a' },
+    { label: 'ai', value: 'ai' },
+    { label: 'aa', value: 'aa' },
+    { label: 'ia', value: 'ia' },
+    { label: 'aaa', value: 'aaa' },
+    { label: 'aac', value: 'aac' },
+    { label: 'ca', value: 'ca' },
+    { label: 'ccc', value: 'ccc' },
+];
     
     const [value, setValue] = React.useState('none');
     
@@ -47,8 +48,6 @@ const DropDownText = () => {
         </select>
     
         </label>
-    
-        <p>We eat {value}!</p>
     
     </div>
     

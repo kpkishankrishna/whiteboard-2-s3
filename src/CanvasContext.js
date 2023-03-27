@@ -5,19 +5,6 @@ const CanvasContext = React.createContext();
 
 var cordinates = "start \n"
 
-const S3_BUCKET ='whiteboard-2';
-const REGION =' ap-south-1';
-const ACCESS_KEY ='AKIAX5UZSDZVJOBBZGSP';
-const SECRET_ACCESS_KEY ="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";
-
-const config = {
-  bucketName: S3_BUCKET,
-  region: REGION,
-  accessKeyId: ACCESS_KEY,
-  secretAccessKey: SECRET_ACCESS_KEY,
-}
-
-
 export const CanvasProvider = ({ children }) => {
   const [isDrawing, setIsDrawing] = useState(false)
   const canvasRef = useRef(null);
@@ -87,7 +74,7 @@ export const CanvasProvider = ({ children }) => {
 
         method: 'POST', 
         mode: 'cors',
-        body: JSON.stringify({'text':text, 'cordinates':cordinates}) // body data type must match "Content-Type" header
+        body: JSON.stringify({'text':text, 'cordinates':cordinates, 'save':'1'}) // body data type must match "Content-Type" header
 
       })
     }  
